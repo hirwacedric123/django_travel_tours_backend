@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safaris details</title>
+    <link rel="stylesheet" href="{% static 'assets/css/safaris-details.css' %}">
+    <!-- ======================= Fontawesome Link ================ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- =================== swipe js====================== -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body onload="hideParagraphs()">
+    <div class="text-header"><h2>Rwanda Northern Experience Safari Highlights & Detailed Itenary</h2></div>
+    <div class="details-page-cont">
+        <div class="details-image-cont">
+            <div class="slider">
+                <div class="list">
+                    <div class="item">
+                        <img src="{% static 'assets/images//safaris-details-images/bfgfh.png' %}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'assets/images//safaris-details-images/buf.png' %}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'assets/images//safaris-details-images/ima.png' %}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'assets/images//safaris-details-images/imne.png' %}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static 'assets/images//safaris-details-images/non.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <ul class="dots">
+                    <li class="active"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="inclusion-exclusion">
+                <div class="inclusion">
+                    <h3 class="h3-title">Included</h3>
+                   <div class="more-desc-p">
+                        <p> <i class="fa-solid fa-square-check"></i>All permits</p>
+                        <p> <i class="fa-solid fa-square-check"></i>Full board accommodation whilst on safari  </p>
+                        <p><i class="fa-solid fa-square-check"></i>All park entrance fees to include government taxes </p>
+                        <p><i class="fa-solid fa-square-check"></i>Service of an English-speaking professional driver guide </p>
+                        <p> <i class="fa-solid fa-square-check"></i>Start and end in Kigali
+                        </p>
+                   </div>                    
+                    
+                   
+                </div>
+                <div class="exclusion">
+                    <h3 class="h3-title">Excluded</h3>
+                    <div class="more-desc-p">
+                        <p><i class="fa-solid fa-square-xmark"></i>Tips</p>
+                        <p><i class="fa-solid fa-square-xmark"></i>Alcoholic drinks</p>
+                        <p><i class="fa-solid fa-square-xmark"></i>International flights and Visas</p>
+                        <p><i class="fa-solid fa-square-xmark"></i>Items of a personal nature</p>
+                    </div>
+
+                    
+                </div>
+           </div>
+        </div>
+        <div class="text-details-cont">
+            <div class="text-descr">
+                <h3 class="h2-details-itenary">Here is Detailed Itenary (Click to extend)</h3>
+                
+               <div class="day-details">
+                    <h3 class="details-h2" onclick="toggleParagraph('day1')"> <span>Day 1:</span> Kigali City Tour &nbsp; <button class="extend" id="button-day1"><i class="fa-solid fa-plus"></i></button>  </h3>
+                    <p id="day1" class="hidden">After breakfast at your hotel in Kigali, you will be picked up by our driver guide who will give you a briefing on what your 6 days Rwanda double gorilla trek and chimpanzee tour is about. Later, drive to southwestern Rwanda to Nyungwe Forest National Park a home to 13 distinct primate species, 310 bird species, numerous plant and tree species among others. Arrive early enough to check in at a lodge in Nyungwe Forest National Park. <br> <br> </p>
+               </div>
+               <div class="day-details">
+                    <h3 class="details-h2" onclick="toggleParagraph('day2')"><span>Day 2:</span>  Gorilla Trekking At Ruhengeri  &nbsp;  <button class="extend" id="button-day2"><i class="fa-solid fa-plus"></i></button></h3>
+
+                    <p id="day2" class="hidden">Make adequate preparation early enough, have breakfast and after, carry some snacks plus bottled water. Head up to Kinigi to be briefed on Rwanda Gorilla Trekking guidelines by an expert from the park who also will allocate to you a gorilla family from 13 groups in Volcanoes National Park. When it clocks 8:00am, a knowledgeable guide leads you into the bamboo forest to spend about 2-6 hours searching for mountain gorillas. Once they have been located, you will be permitted 1 hour to be with these unique species <br><br>
+                    </p>
+               </div> 
+               <div class="day-details">
+                    <h3 class="details-h2" onclick="toggleParagraph('day3')"> <span>Day 3:</span> Golden Monkey Trekking &nbsp;  <button class="extend" id="button-day3"><i class="fa-solid fa-plus"></i></button></h3>
+
+                    <p id="day3" class="hidden">After a morning tasty cup of tea/coffee, meet and greet your guide then connect to Kinigi to be briefed on Golden monkey Tracking guidelines. Today, your tour highlight is all about tracking to see golden monkeys in the wild and this will be 2-4 hours search including 1 hour of face to face encounter. Return to check out of the booked lodge and be transferred back to Kigali for departure flight <br><br>
+                    </p>
+                
+               </div> <br>
+               <a href="/book.html" style="text-decoration: none;" ><button class="book-now">Book Now</button></a>
+
+
+                <!-- Add similar sections for other days -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        let slider = document.querySelector('.slider .list');
+        let items = document.querySelectorAll('.slider .list .item');
+        let next = document.getElementById('next');
+        let prev = document.getElementById('prev');
+        let dots = document.querySelectorAll('.slider .dots li');
+
+        let lengthItems = items.length - 1;
+        let active = 0;
+        next.onclick = function(){
+            active = active + 1 <= lengthItems ? active + 1 : 0;
+            reloadSlider();
+        }
+        prev.onclick = function(){
+            active = active - 1 >= 0 ? active - 1 : lengthItems;
+            reloadSlider();
+        }
+        let refreshInterval = setInterval(()=> {next.click()}, 3000);
+        function reloadSlider(){
+            slider.style.left = -items[active].offsetLeft + 'px';
+            // 
+            let last_active_dot = document.querySelector('.slider .dots li.active');
+            last_active_dot.classList.remove('active');
+            dots[active].classList.add('active');
+
+            clearInterval(refreshInterval);
+            refreshInterval = setInterval(()=> {next.click()}, 3000);
+
+            
+        }
+
+        dots.forEach((li, key) => {
+            li.addEventListener('click', ()=>{
+                active = key;
+                reloadSlider();
+            })
+        })
+        window.onresize = function(event) {
+            reloadSlider();
+        };
+
+
+        function hideParagraphs() {
+            const paragraphs = document.querySelectorAll('.hidden');
+            paragraphs.forEach(paragraph => {
+                paragraph.classList.add('hidden');
+            });
+        }
+
+        function toggleParagraph(day) {
+            const paragraph = document.getElementById(day);
+            const button = document.getElementById(`button-${day}`);
+
+            if (paragraph.classList.contains('hidden')) {
+                paragraph.classList.remove('hidden');
+                paragraph.classList.add('visible');
+                button.innerHTML = '<i class="fa-solid fa-minus"></i>';
+            } else {
+                paragraph.classList.remove('visible');
+                paragraph.classList.add('hidden');
+                button.innerHTML = '<i class="fa-solid fa-plus"></i>';
+            }
+        }
+ 
+    </script>
+    
+</body>
+</html>

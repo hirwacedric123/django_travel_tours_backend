@@ -1,0 +1,296 @@
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --black-color: hsl(220, 24%, 12%);
+    --black-color-light: hsl(220, 24%, 15%);
+    --black-color-lighten: hsl(220, 20%, 18%);
+    --white-color: #fff;
+    --body-color: hsl(220, 100%, 97%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: "Montserrat", sans-serif;
+    --normal-font-size: .938rem;
+  
+    /*========== Font weight ==========*/
+    --font-regular: 400;
+    --font-semi-bold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+body{
+    font-family: 'Lato', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--black-color);
+    box-shadow: inset 0 0 30px 5px rgba(255, 255, 255, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Slideshow container And journey Details */
+
+.details-page-cont{
+    display: flex;
+    background-color: var(--black-color-light);
+    box-shadow: inset 0 0 100px 5px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.details-image-cont{
+    width: 50%;
+    border: 2px solid #606060;
+    
+}
+.details-image-cont img{
+    width: 100%; /* Ensure the image fills the container horizontally */
+    height: 100%; /* Ensure the image fills the container vertically */
+    object-fit: cover; /* Mimic background-size: cover */
+    object-position: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 5px;
+    height: 80vh;
+    max-width: 100%;
+    max-height: 100%;
+}
+.text-header h2{
+    color: var(--white-color);
+}
+
+.details-image-cont img:hover{
+    filter: grayscale(1.2);
+}
+.text-descr{
+    padding: 20px;
+    margin-left: 10px;
+    border: 1px solid #fff;
+
+    box-shadow: inset 0 0 5px 5px rgba(255, 255, 255, 0.6), inset 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--black-color);
+}
+.text-descr .day-details{
+    border: 1px solid #707070;
+    box-shadow: inset 0 0 10px 5px rgba(255, 255, 255, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 0px 15px;
+    background-color: var(--black-color-lighten);
+    color: var(--white-color);
+}
+.text-descr p{
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #dddddd;
+
+      
+}
+.h2-details-itenary{
+  color: var(--white-color);
+}
+.text-header{
+    display: flex;
+    padding: 5px 20px;
+    justify-content: center;
+    align-items: center;
+}
+.text-header h2{
+    font-size: 20px;
+    font-weight: 900;
+    display: inline-block;
+    text-align: center;
+}
+
+.text-descr .day-details h3 span{
+    font-weight: 800;
+    padding-right: 10px;
+}
+.text-descr i{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+.day-details h3{
+    padding: 2px 5px;
+    border-radius: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.day-details h3:hover{
+    color: #009900;
+}
+
+.extend{
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    background-color: #009900;
+    padding: 3px 4px;
+    transition: 0.5s ease-in-out;
+}
+.extend:hover{
+    background-color:  #008000;
+    padding: 4px 8px;
+}
+.hidden {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in;
+}
+.text-descr .book-now {
+    display: block;
+    padding: 8px 9%;
+    border: none;
+    background-color: #009900;
+    color: #fff;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease-out;
+}
+.text-descr .book-now:hover{
+    padding: 8px 12%;
+    background-color: #066111;
+}
+
+.visible {
+    max-height: 500px; /* Set an appropriate max-height value */
+    transition: max-height 0.9s ease-in-out;
+}
+/* ========== End of Slide show and Details ========== */
+
+
+/* =========== Included And Excluded ========= */
+
+.inclusion-exclusion{
+    margin: 10px 5px ;
+    display: grid;
+    background: rgb(63, 63, 63);
+    grid-template-columns: 3fr 2fr;
+    gap: 15px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    
+    
+}
+.inclusion-exclusion .h3-title{
+    background-color:#009900;
+    margin-top: 0;
+    color: white;
+    margin-left: -10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    
+}
+.inclusion-exclusion .inclusion p i{
+    color: #009900;
+    margin-right: 3px;
+}
+.inclusion-exclusion .exclusion p i{
+    color: rgb(238, 4, 4);
+    margin-right: 3px;
+}
+.inclusion-exclusion .inclusion,
+.inclusion-exclusion .exclusion {
+    background-color:var(--black-color-light);
+    display: flex;
+    flex-direction: column;
+    color: var(--white-color);
+    padding: 0 3px 0 10px;
+    /* border: 1px solid #ccc; */
+    box-shadow: inset 0 0 3px 5px rgba(255, 255, 255, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ====== slide show images ====== */
+.slider{
+   width: 45vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 450px;
+   position: relative;
+   overflow: hidden;
+}
+.slider .list{
+    position: absolute;
+    width: max-content; 
+    height: 100%;
+    display: flex;
+    transition: 1s;
+    justify-content: center;
+    align-items: center;
+}
+/* .slider .list img{
+ width: 100%;
+ object-position: center;
+} */
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 4%;
+    width: 90%;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+.list .item{
+    width: 100%;
+    display: flex;
+}
+
+/* ====================== Slide show ends ================================= */
+
+@media only screen and (max-width: 768px) {
+    .details-page-cont{
+        flex-direction: column;
+        /* padding: 10px; */
+    }
+    .slider{
+        width: 100vw;
+    }
+    .inclusion-exclusion{
+        width: 90vw;
+    }
+}

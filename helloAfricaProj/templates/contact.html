@@ -1,0 +1,99 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!--====== Fontawesome link============= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- ========css link =============== -->
+    <link rel="stylesheet" href="{% static 'assets/css/contact-style.css' %}">
+</head>
+<body>
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus cumque eius alias sit, officia id vel distinctio reiciendis qui aut nobis voluptate harum quidem! Dicta qui quibusdam modi reprehenderit doloribus?</p>
+        </div>
+        <div class="contact-container">
+            <div class="contactInfo">
+                <div class="box" >
+                    <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>KN 203st Nyamirambo, <br> Kigali, Nyarugenge,<br> 55060</p>
+                    </div>
+                </div>
+                <div class="box" onclick="openWhatsApp('+250790250425')">
+                    <div class="icon"><i class="fa-brands fa-whatsapp"></i></div>
+                    <div class="text">
+                        <h3>WhatsApp</h3>
+                        <p>+250 790 250 425</p>
+                    </div>
+                </div>
+                <div class="box" onclick="callNumber('+250790250425')">
+                    <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>+250 790 250 425</p>
+                    </div>
+                </div>
+                <div class="box" onclick="sendEmail('hirwacedric123@gmail.com')">
+                    <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>hirwacedric123@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <form action="{% url 'send-message' %}" method="POST" class="contactForm"   >
+                {% csrf_token %}
+                
+                <h2>Send Message</h2>
+                <div class="inputBox">
+                    <input type="text" name="name" required="required" class="textbx">
+                    <span>Enter Your Full name</span>
+                </div>
+                <div class="inputBox">
+                    <input type="email" name="email" required="required">
+                    <span>Type your Email</span>
+                </div> 
+                <div class="inputBox">
+                    <input type="text" name="phone" required>
+                    <span>Phone</span>
+                </div>
+                <div class="inputBox" >
+                    <textarea name="message" id="" cols="30" rows="6" required></textarea>
+                    <span>Type Your Message .....</span>
+                </div>
+                <div class="inputButton" >
+                    <input  type="submit" value="Send">
+                </div>
+                   
+            </form>
+        </div>
+    </section>
+
+
+    <script>
+        function callNumber(number) {
+            window.location.href = 'tel:' + number;
+        }
+    
+        function openWhatsApp(number) {
+            // If you have a WhatsApp number, the format should be "whatsapp://send?phone=NUMBER"
+            // Replace "NUMBER" with the phone number, removing any spaces or special characters
+            var whatsappURL = 'whatsapp://send?phone=' + number;
+            window.location.href = whatsappURL;
+        }
+    
+        function sendEmail(email) {
+            window.location.href = 'mailto:' + email;
+        }
+    </script>
+    
+</body>
+</html>
