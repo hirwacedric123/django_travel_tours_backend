@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book A Journey</title>
-    <link rel="stylesheet" href="book-style.css">
+    <link rel="stylesheet" href="{% static 'assets/css/book-style.css' %}">
 </head>
 <body>
     <div class="book-container" >
@@ -22,6 +23,10 @@
                 <div class="inputBox">
                     <input type="text"  required>
                     <span>Phone</span>
+                </div>
+                <div class="inputBox">
+                    <input type="date" placeholder="none" required>
+                    <span>Start date</span>
                 </div>
                 <div class="inputBox">
                     <input type="text"  required>

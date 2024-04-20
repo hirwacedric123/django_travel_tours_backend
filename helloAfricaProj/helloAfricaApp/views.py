@@ -22,6 +22,8 @@ def contact(request):
     return render (request, 'contact.html')
 def safarisDetails(request):
     return render (request, 'safaris-details.html')
+def book_page(request):
+    return render (request, 'book.html')
 
 
 
