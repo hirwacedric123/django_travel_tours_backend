@@ -14,39 +14,6 @@ const showMenu = (toggleId, navId) =>{
 
 showMenu('nav-toggle','nav-menu')
 
-var swiper = new Swiper('.swiper', {
-    effect: 'fade',
-    autoplay: {
-       delay: 3000,
-       disableOnInteraction: false,
-    },
-    loop: true,
-    pagination: {
-       el: '.swiper-pagination',
-       clickable: true,
-    },
-    navigation: {
-       nextEl: '.swiper-button-next',
-       prevEl: '.swiper-button-prev',
-    },
-    on: {
-       init: function () {
-          // When Swiper is initialized, add active class to the first slide content
-          document.querySelector('.slide-content').classList.add('active');
-       },
-       slideChange: function () {
-          // When slide changes, remove active class from all slide contents
-          var activeContents = document.querySelectorAll('.slide-content.active');
-          activeContents.forEach(function (content) {
-             content.classList.remove('active');
-          });
-          // Add active class to the current slide content
-          var currentSlide = this.slides[this.activeIndex];
-          var slideContent = currentSlide.querySelector('.slide-content');
-          slideContent.classList.add('active');
-       },
-    },
- });
 
 const initSlider = () => {
     const imageList = document.querySelector(".slider-wrapperrer .image-list");

@@ -1,50 +1,97 @@
+
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book A Journey</title>
-    <link rel="stylesheet" href="{% static 'assets/css/book-style.css' %}">
-</head>
+<head>     
+         <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <!-- Font Awesome Cdn -->
+    
+     <link rel="stylesheet" href="{% static 'assets/css/book-style.css' %}"></head>
+
+
 <body>
+    {% include 'navbar.html' %}
     <div class="book-container" >
         <div class="book-form">
-            <form action="">
+            <form action="{% url 'books' %}" id="booking-form" method="POST">
+                {% csrf_token %}
+
                 <h2>Book Your Destination</h2>
                 <div class="inputBox">
-                    <input type="text" required="required" class="textbx">
-                    <span>Full name</span>
+                    <input type="text" name="username" required="required" class="textbx">
+                    <span>Full Name</span>
                 </div>
                 <div class="inputBox">
-                    <input type="email" required="required">
+                    <input type="email" name="useremail" required="required">
                     <span>Email</span>
                 </div> 
                 <div class="inputBox">
-                    <input type="text"  required>
+                    <input type="tel" name="telnumber" required>
                     <span>Phone</span>
                 </div>
                 <div class="inputBox">
-                    <input type="date" placeholder="none" required>
-                    <span>Start date</span>
+                    <input type="text" name="destination" required>
+                    <span>Destination</span>
                 </div>
                 <div class="inputBox">
-                    <input type="text"  required>
-                    <span>Origin Country</span>
+                    <input type="date" name="arrivals" required>
+                    <span>Start Date</span>
                 </div>
                 <div class="inputBox">
-                    <input type="text"  required>
-                    <span>How Many Are You</span>
+                    <input type="text" name="howMany" required>
+                    <span>Number of People</span>
                 </div>
-                <div class="inputBox" >
-                    <textarea name="" id="" cols="30" rows="6" required></textarea>
-                    <span>Type Your Message .....</span>
+                <div class="inputBox">
+                    <textarea name="bookmessage" cols="30" rows="6" required></textarea>
+                    <span>Type Your Message ...</span>
                 </div>
                 <div class="inputButton">
-                    <input type="submit" value="Send">
+                    <input type="submit" id="submit-button" value="Send">
                 </div>
             </form>
         </div>
     </div>
+    <!-- Success Message Card -->
+    <div id="success-card" class="overlay-card">
+        <div class="card-contente">
+            <p>Your Message Has Been Sent Successfully! <br> We will get to you back soon, Thank you for reaching us</p>
+            <a href="{% url 'book-page' %}"><button class="okay-btn">Ok</button>
+            </a>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+
+    <!-- JavaScript to show the success card -->
+    <script>
+        // Function to show the success message card
+        function showSuccessCard() {
+            document.getElementById("success-card").style.display = "block";
+        }
+
+        // Add event listener to the form submission button
+        document.getElementById("booking-form").addEventListener("submit", function(event) {
+            // Prevent the default form submission behavior
+            event.preventDefault();
+
+            // Submit the form using AJAX
+            fetch(this.action, {
+                method: this.method,
+                body: new FormData(this)
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show the success card if the form was submitted successfully
+                    showSuccessCard();
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+            });
+        });
+    </script>
 </body>
 </html>

@@ -57,6 +57,7 @@ body{
     max-height: 100%;
 }
 .text-header h2{
+    
     color: var(--white-color);
 }
 
@@ -88,6 +89,7 @@ body{
 }
 .h2-details-itenary{
   color: var(--white-color);
+  
 }
 .text-header{
     display: flex;

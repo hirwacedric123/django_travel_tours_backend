@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 </head>
-<body onload="hideParagraphs()">
-    <div class="text-header"><h2>Rwanda Northern Experience Safari Highlights & Detailed Itenary</h2></div>
+<body onload="hideParagraphs() ">
+    {% include 'navbar.html' %}
+    <div class="text-header" style="margin-top: 100px; padding: 20px; background-color: hsl(220, 20%, 18%);"><h2>Rwanda Northern Experience Safari Highlights & Detailed Itenary</h2></div>
     <div class="details-page-cont">
         <div class="details-image-cont">
             <div class="slider">
@@ -76,7 +77,7 @@
         </div>
         <div class="text-details-cont">
             <div class="text-descr">
-                <h3 class="h2-details-itenary">Here is Detailed Itenary (Click to extend)</h3>
+                <h3 class="h2-details-itenary" style="margin-bottom: 20px;">Here is Detailed Itenary (Click to extend)</h3>
                 
                <div class="day-details">
                     <h3 class="details-h2" onclick="toggleParagraph('day1')"> <span>Day 1:</span> Kigali City Tour &nbsp; <button class="extend" id="button-day1"><i class="fa-solid fa-plus"></i></button>  </h3>
@@ -103,6 +104,7 @@
             </div>
         </div>
     </div>
+    {% include 'footer.html' %}
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

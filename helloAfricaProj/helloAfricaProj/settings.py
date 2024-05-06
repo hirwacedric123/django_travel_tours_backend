@@ -134,3 +134,42 @@ EMAIL_HOST_USER = 'hirwacedric123@gmail.com'  # Your Gmail email address
 EMAIL_HOST_PASSWORD = 'saap jgza uzge zovk'  # Your Gmail password or App Password
 EMAIL_USE_TLS = True  # For secure connection
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'helloAfricaApp/logfile.log',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'helloAfricaApp': {  # Replace 'myapp' with the name of your Django app
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+    },
+}

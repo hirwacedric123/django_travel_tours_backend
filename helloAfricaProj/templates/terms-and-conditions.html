@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'assets/css/terms-and-condition.css' %}">
 </head>
 <body>
+    {% include 'navbar.html' %}
     <div class="main-text"> 
         <h1>OVERVIEW</h1>
         <p>
@@ -309,10 +311,10 @@
         CONTACT INFORMATION
         Questions about the Terms of Service should be sent to us at info@helloafricatoursandtravels.com
         
-        [/vc_column_text][/vc_column][/vc_row]
        </p>
         
 
     </div>
+    {% include 'footer.html' %}
 </body>
 </html>
