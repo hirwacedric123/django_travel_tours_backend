@@ -176,6 +176,7 @@ a {
 .packages .card-content .row:hover{
   scale: 1.02;
   box-shadow: inset 0 0 30px rgba(238, 229, 229, 0.7);
+  border: 2px solid #c1c1c1;
 
 }
 .packages .row img{
@@ -210,8 +211,9 @@ a {
 }
 .packages .card-body h5{
   margin-top: 10px;
-  font-size: 13px;
+  font-size: 16px;
 }
+
 
 .packages .card-body .book-btn{
   width: 100px;
@@ -497,7 +499,7 @@ a {
 .slider-wrapperrer .image-list {
   display: grid;
   padding-bottom: 5px;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   gap: 10px;
   font-size: 0;
   list-style: none;
@@ -519,7 +521,8 @@ a {
   cursor: pointer;
   height: 400px;
   object-fit: cover;
-  transition: 0.7s all;
+  transition: 0.5s all;
+  object-position: center;
 
 }
 .slider-wrapperrer .image-list .image-item:hover{

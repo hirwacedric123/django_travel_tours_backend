@@ -24,7 +24,6 @@
   }
 
 body{
-    font-family: 'Lato', sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -43,6 +42,7 @@ body{
 .details-image-cont{
     width: 50%;
     border: 2px solid #606060;
+    border-radius: 10px;
     
 }
 .details-image-cont img{
@@ -115,7 +115,7 @@ body{
     cursor: pointer;
 }
 .day-details h3{
-    padding: 2px 5px;
+    padding: 10px 5px 2px;
     border-radius: 20px;
     font-size: 17px;
     font-weight: 700;
@@ -170,26 +170,42 @@ body{
 /* =========== Included And Excluded ========= */
 
 .inclusion-exclusion{
-    margin: 10px 5px ;
+    margin: 30px 5px ;
+    position: relative;
     display: grid;
     background: rgb(63, 63, 63);
     grid-template-columns: 3fr 2fr;
     gap: 15px;
+    padding: 40px 0px 0px;
     border: 2px solid #ccc;
     border-radius: 5px;
     
     
 }
+.inclusion-exclusion .inclusion, .inclusion-exclusion .exclusion{
+    position: relative;
+}
 .inclusion-exclusion .h3-title{
     background-color:#009900;
-    margin-top: 0;
+    position: absolute;
+    top: -40px;
+    left: 0;
     color: white;
-    margin-left: -10px;
-    padding: 10px 20px;
+    padding: 10px 25px;
+    width: 100%;
     border-radius: 5px;
 
     
 }
+.more-desc-p{
+    margin-top: 20px;
+    padding: 10px 2px;
+  }
+  .more-desc-p p{
+   margin-bottom: 15px;
+   line-height: 1em;
+  }
+  
 .inclusion-exclusion .inclusion p i{
     color: #009900;
     margin-right: 3px;
@@ -204,7 +220,7 @@ body{
     display: flex;
     flex-direction: column;
     color: var(--white-color);
-    padding: 0 3px 0 10px;
+    padding: 0 10px 10px;
     /* border: 1px solid #ccc; */
     box-shadow: inset 0 0 3px 5px rgba(255, 255, 255, 0.5), inset 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -247,12 +263,16 @@ body{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #fff5;
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
+    font-size: 25px;
     cursor: pointer;
     border: none;
     font-family: monospace;
     font-weight: bold;
+}
+.slider .buttons button:hover{
+    background: black;
 }
 .slider .dots{
     position: absolute;
@@ -263,6 +283,7 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
+    cursor: pointer;
     justify-content: center;
 }
 .slider .dots li{
