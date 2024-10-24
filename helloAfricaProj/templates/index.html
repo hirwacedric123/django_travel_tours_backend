@@ -21,347 +21,578 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
       <title>Hello Africa</title>
+
+      <link rel="preload" as="image" href="./assets/images/hero-slider-1.jpg">
+      <link rel="preload" as="image" href="./assets/images/hero-slider-2.jpg">
+      <link rel="preload" as="image" href="./assets/images/hero-slider-3.jpg">
+
+        <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
    </head>
-   <body>
-      <!--=============== HEADER ===============-->
-     
+   <body id="top">
+    {% include 'navbar.html' %}
 
       <!-- ====================== MAIN SECTION ============================= -->
   <main>
-          {% include 'navbar.html' %}
+
+    <article>
 
 
-      <!-- Home Section Start -->
-          <div class="home">
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide background-image">
-                  <img src="{% static 'assets/images/kruger-national-park-lion.jpg' %}" alt="">
-                  <div class="slide-content active" >
-                      <h2>Explore Kivu</h2>
-                      <p>Discover the beauty of Kivu with our exciting travel packages.</p>
-                  </div>
-                </div>
-                <div class="swiper-slide background-image">
-                  <img src="{% static 'assets/images/gorillas-volcanoe-national-park.jpg' %}" alt="">
-                  <div class="slide-content active">
-                      <h2>Explore Kivu</h2>
-                      <p>Discover the beauty of Kivu with our exciting travel packages.</p>
-                  </div>
-                </div>
-                <div class="swiper-slide background-image">
-                  <img src="{% static 'assets/images/Visit-Rwanda_-Akagera-Giraffe-1920x1280.jpg' %}" alt="">
-                  <div class="slide-content active">
-                      <h2>Explore Kivu</h2>
-                      <p>Discover the beauty of Kivu with our exciting travel packages.</p>
-                  </div>
-                </div>
-                
-                <div class="swiper-slide background-image">
-                  <img src="{% static 'assets/images/Zebra.jpg' %}" alt="">
-                  <div class="slide-content active">
-                      <h2>Explore Kivu</h2>
-                      <p>Discover the beauty of Kivu with our exciting travel packages.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide background-image">
-                  <img src="{% static 'assets/images/volcanoes-mountains.png' %}" alt="">
-                  <div class="slide-content active">
-                      <h2>Explore Kivu</h2>
-                      <p>Discover the beauty of Kivu with our exciting travel packages.</p>
-                    </div>
-                </div>
-                <div class="swiper-slide background-image">
-                  <img src="{% static 'assets/images/Visit-Rwanda-Akagera-Three-Zebra-1920x1280.jpg' %}" alt="">
-                  <div class="slide-content active">
-                      <h2>Explore Kivu</h2>
-                      <p>Discover the beauty of Kivu with our exciting travel packages.</p>
-                    </div>
-                </div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+            <!-- Home Section Start -->
+<!-- Home Section Start -->
+          <section class="hero text-center" aria-label="home" id="home">
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+            <ul class="hero-slider" data-hero-slider>
+
+              <li class="slider-item active" data-hero-slider-item>
+
+                <div class="slider-bg">
+                  <img src="{% static 'assets/images/indian-leopard-its-natural-habitat.jpg' %}" width="1880" height="950" alt="" class="img-cover">
+                </div>
+
+                <p class="label-2 section-subtitle slider-reveal">Let’s travel beyond boundaries</p>
+
+                <h1 class="display-1 hero-title slider-reveal">
+                  Discover Rwanda's <br>
+                  Wildlife Wonders
+                </h1>
+
+                <p class="body-2 hero-text slider-reveal">
+                  Embark on a journey to explore the majestic wildlife and breathtaking landscapes of Rwanda.
+                </p>
+
+                <a href="#" class="btn btn-primary slider-reveal">
+                  <span class="text text-1">Explore Our Tours</span>
+                  <span class="text text-2" aria-hidden="true">Explore Our Tours</span>
+                </a>
+
+              </li>
+
+              <li class="slider-item" data-hero-slider-item>
+
+                <div class="slider-bg">
+                  <img src="{% static 'assets/images/kruger-national-park-lion.png' %}" width="1880" height="950" alt="" class="img-cover">
+                </div>
+
+                <p class="label-2 section-subtitle slider-reveal">Delightful Journeys</p>
+
+                <h1 class="display-1 hero-title slider-reveal">
+                  Uncover Rwanda’s <br>
+                  Natural Beauty
+                </h1>
+
+                <p class="body-2 hero-text slider-reveal">
+                  From savannahs to rainforests, immerse yourself in the diverse landscapes of Rwanda.
+                </p>
+
+                <a href="#" class="btn btn-primary slider-reveal">
+                  <span class="text text-1">Plan Your Adventure</span>
+                  <span class="text text-2" aria-hidden="true">Plan Your Adventure</span>
+                </a>
+
+              </li>
+
+              <li class="slider-item" data-hero-slider-item>
+
+                <div class="slider-bg">
+                  <img src="{% static 'assets/images/gorillas-volcanoe-national.jpg' %}" width="1880" height="950" alt="" class="img-cover">
+                </div>
+
+                <p class="label-2 section-subtitle slider-reveal">Immersive Experiences</p>
+
+                <h1 class="display-1 hero-title slider-reveal">
+                  Journey Through <br>
+                  Rwanda’s Rich Culture
+                </h1>
+
+                <p class="body-2 hero-text slider-reveal">
+                  Connect with Rwanda’s vibrant culture and traditions on every tour.
+                </p>
+
+                <a href="#" class="btn btn-primary slider-reveal">
+                  <span class="text text-1">Discover More</span>
+                  <span class="text text-2" aria-hidden="true">Discover More</span>
+                </a>
+
+              </li>
+
+            </ul>
+
+            <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+              <ion-icon name="chevron-back"></ion-icon>
+            </button>
+
+            <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+              <ion-icon name="chevron-forward"></ion-icon>
+            </button>
+
+          </section>
+
+      
+                    <!-- gallery Section Start -->
+              <section class="gallery" id="gallery">
+                <div class="heading" align="center">
+                    <h3>Our Destinations <i class="fa-solid fa-arrow-down"></i></h3>
+                </div>
+      
+                <div class="gallery-card">
+                    <div class="roww">
+                        <img src="{% static 'assets/images/gorillas-volcanoe-national-park.jpg' %}" alt="">
+                        <div class="destination-description"><h2>Rwanda</h2></div>
+                        <a href="#" class="btn btn-secondary">
+                          <span class="text text-1">View More</span>
+                  
+                          <span class="text text-2" aria-hidden="true">View More</span>
+                        </a>
+                        
+                    </div>
+                    <div class="roww" >
+                        <img src="{% static 'assets/images/Big-5-Gorilla-Safari-Uganda-02-640w.jpg' %}" alt="">
+                        <div class="destination-description"><h2>Uganda</h2></div>
+                        <a href="#" class="btn btn-secondary">
+                          <span class="text text-1">View More</span>
+                  
+                          <span class="text text-2" aria-hidden="true">View More</span>
+                        </a>
+                    </div>
+                    <div class="roww">
+                        <img src="{% static 'assets/images/nairobi-city.jpg' %}" alt="">
+                        <div class="destination-description"><h2>Kenya</h2></div>
+                        <a href="#" class="btn btn-secondary">
+                          <span class="text text-1">View More</span>
+                  
+                          <span class="text text-2" aria-hidden="true">View More</span>
+                        </a>
+                    </div>
+                    <div class="roww">
+                        <img src="{% static 'assets/images/rhino-sanctuary.jpg' %}" alt="">
+                        <div class="destination-description"><h2>Tanzania</h2></div>
+                        <a href="#" class="btn btn-secondary">
+                          <span class="text text-1">View More</span>
+                  
+                          <span class="text text-2" aria-hidden="true">View More</span>
+                        </a>
+                    </div>
+                  
+      
+                </div>
+            </section>
+            <!-- gallery Section End -->
+            <!-- ===============Packages Section Start ====================-->
+      
+              <section class="packages" id="packages">
+                <div class="main-txt">
+                    <h3>Our Fully Guided Packages</h3> <hr>
+                </div>
+      
+                <div class="card-content">
+                    <div class="row">
+                      <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><img src="{% static 'assets/images/3+days+Rwanda+Gorilla+Trekking+-640w.jpg' %}" alt=""></a>
+                        <div class="card-body">
+                            <h3>3 days Gorilla Trekking at Ruhengeri</h3>
+                            <p>
+                              Enjoy our  days Gorilla Trekking in the bush of virunga's national park </p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h5>Price :  $999</h5>
+                            <a href="#" class="btn btn-secondary">
+                              <span class="text text-1">Book Now</span>
+                      
+                              <span class="text text-2" aria-hidden="true">Book Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="{% url 'safaris-details' %}" ><img src="{% static 'assets/images/Visit-Rwanda-Akagera-Three-Zebra-1920x1280.jpg' %}" alt=""></a>
+                        <div class="card-body">
+                            <h3>2 Days Akagera Park Visit</h3>
+                            <p>
+                              Enjoy our  days Gorilla Trekking in the bush of virunga's national park</p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h5>Price :  $999</h5>
+                        <a href="#" class="btn btn-secondary">
+                          <span class="text text-1">Book Now</span>
+                  
+                          <span class="text text-2" aria-hidden="true">Book Now</span>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/Depositphotos_149502314_L.jpg' %}" alt=""></a>
+                        <div class="card-body">
+                            <h3>4 Days Primate Tracking</h3>
+                            <p>
+                              Enjoy our  days Gorilla Trekking in the bush of virunga's national park
+                            </p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h5>Price :  $999</h5>
+                            <a href="#" class="btn btn-secondary">
+                              <span class="text text-1">Book Now</span>
+                      
+                              <span class="text text-2" aria-hidden="true">Book Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/lake-kivu-boats.jpg' %}" alt=""></a>
+                        <div class="card-body">
+                            <h3>5 days Lake Kivu Visit</h3>
+                            <p>
+                              Enjoy our  days Gorilla Trekking in the bush of virunga's national park
+                            </p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h5>Price :  $999</h5>
+                            <a href="#" class="btn btn-secondary">
+                              <span class="text text-1">Book Now</span>
+                      
+                              <span class="text text-2" aria-hidden="true">Book Now</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                      <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/Visit-Rwanda_-Kigali-Convention-Centre-1920x1280.jpg' %}" alt=""></a>
+                        <div class="card-body">
+                            <h3>2 Days Kigali city Tour</h3>
+                            <p>
+                              Enjoy our  days Gorilla Trekking in the bush of virunga's national park
+                            </p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h5>Price :  $999</h5>
+                        <a href="#" class="btn btn-secondary">
+                          <span class="text text-1">Book Now</span>
+                  
+                          <span class="text text-2" aria-hidden="true">Book Now</span>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/nyungwe-tours-05-640w.jpg' %}" alt=""></a>
+                        <div class="card-body">
+                            <h3>4 days nyungwe national park Vist</h3>
+                            <p>
+                              Enjoy our  days Gorilla Trekking in the bush of virunga's national park
+                            </p>
+                            <div class="rating">
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                                <i class="fa-solid fa-star checked"></i>
+                            </div>
+                            <h5>Price :  $999</h5>
+                            <a href="#" class="btn btn-secondary">
+                              <span class="text text-1">Book Now</span>
+                      
+                              <span class="text text-2" aria-hidden="true">Book Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+      
+            </section>
+            <section class="about" id="about">
+            <div class="about-img">
+                <img src="{% static 'assets/images/boat-magashi.jpg' %}" alt="">
+            </div>
+            <div class="about-info">
+                <h6>About us</h6>
+                <p>At Hello Africa Travel And Tours Team We pride ourselves on providing the best safaris vehicles and experienced tour guides for a memorable experience all over the world.
+                  At Hello Africa Travel And Tours Team We pride ourselves on providing the best safaris vehicles and experienced tour guides for a memorable experience all over the world.
+                </p>
+      
+                <p>You will get all wild life action using our long-range high-frequency radio and binoculars. Our safari guide books help our local tour guides provide detailed information about flora and fauna.</p>
+      
+                <a href="#" class="btn btn-secondary">
+                  <span class="text text-1">Read More </span>
+          
+                  <span class="text text-2" aria-hidden="true">Read More</span>
+                </a>
+            </div>
+          </section>
+      
+          <div class="collections">
+            <h2 class="gallery-header">Our Gallery</h2>
+            <div class="slider-wrapperrer">
+              <button id="prev-slide" class="slide-button material-symbols-rounded">
+                chevron_left
+              </button>
+              <ul class="image-list">
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-NH_OO_Activities_Chimpanzee_Trek_6853_MASTER-1280x853.jpg' %}" alt="img-6" />
+      
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Crater-Lake-Volcanoes-e1533416621808-1920x1267.jpg' %}"alt="img-7" />
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Akagera-Young-Rhino-1920x1280.jpg' %}"alt="img-9" />
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Rusizi-District-1650x1100.jpg' %}"alt="img-8" />
+      
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Akagera-Lion-in-Tree-1920x1280.jpg' %}"alt="img-10" />
+                <img class="image-item" src="{% static 'assets/images/elephants.jpg' %}"alt="img-1" />
+                <img class="image-item" src="{% static 'assets/images/giraffe-uganda-800x600.jpg' %}" alt="img-2" />
+                <img class="image-item" src="{% static 'assets/images/leopard.jpg' %}" alt="img-3" />
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Volcano-1650x1100.jpg' %}"alt="img-4" />
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-NH_OO_Lifestyle_Canopy_Walk_0657_MASTER-700x467.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/3+days+Rwanda+Gorilla+Trekking+-640w.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/1+Day+Akagera+National+Park+Safari-640w.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/Zebra.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Musanze-Cave-1920x1920.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/1+Day+Rwanda+Gorilla+Trekking-640w.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/2+Days+Akagera+National+Park+Safari-640w.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/12--1920x1278.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/15+DAYS+UGANDA-RWANDA+-+ODYSSEY.docx-640w.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/20246390302_0010758338_k-1650x1100.jpg' %}" alt="img-5" />
+      
+                <img class="image-item" src="{% static 'assets/images/16-DAYS-BIRDS-OF-UGANDA.jpg' %}" alt="img-5" />
+      
+      
+              </ul>
+              <button id="next-slide" class="slide-button material-symbols-rounded">
+                chevron_right
+              </button>
+            </div>
+            <div class="slider-scrollbar">
+              <div class="scrollbar-track">
+                <div class="scrollbar-thumb"></div>
+              </div>
             </div>
           </div>
 
-              <!-- gallery Section Start -->
-        <section class="gallery" id="gallery">
-          <div class="heading" align="center">
-              <h3>Our Destinations <i class="fa-solid fa-arrow-down"></i></h3>
-          </div>
+   
 
-          <div class="gallery-card">
-              <div class="roww">
-                  <img src="{% static 'assets/images/gorillas-volcanoe-national-park.jpg' %}" alt="">
-                  <div class="destination-description"><h2>Rwanda</h2></div>
-                  <button class="view-more">View More</button>
-                  
-              </div>
-              <div class="roww" >
-                  <img src="{% static 'assets/images/Big-5-Gorilla-Safari-Uganda-02-640w.jpg' %}" alt="">
-                  <div class="destination-description"><h2>Uganda</h2></div>
-                  <button class="view-more">View More</button>
-              </div>
-              <div class="roww">
-                  <img src="{% static 'assets/images/nairobi-city.jpg' %}" alt="">
-                  <div class="destination-description"><h2>Kenya</h2></div>
-                  <button class="view-more">View More</button>
-              </div>
-              <div class="roww">
-                  <img src="{% static 'assets/images/rhino-sanctuary.jpg' %}" alt="">
-                  <div class="destination-description"><h2>Tanzania</h2></div>
-                  <button class="view-more">View More</button>
-              </div>
-            
+    </article>
 
-          </div>
-      </section>
-      <!-- gallery Section End -->
-      <!-- ===============Packages Section Start ====================-->
-
-        <section class="packages" id="packages">
-          <div class="main-txt">
-              <h3>Our Fully Guided Packages</h3> <hr>
-          </div>
-
-          <div class="card-content">
-              <div class="row">
-                <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><img src="{% static 'assets/images/3+days+Rwanda+Gorilla+Trekking+-640w.jpg' %}" alt=""></a>
-                  <div class="card-body">
-                      <h3>3 days Gorilla Trekking at Ruhengeri</h3>
-                      <p>
-                        Enjoy our  days Gorilla Trekking in the bush of virunga's national park </p>
-                      <div class="rating">
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                      </div>
-                      <h5>Price :  $999</h5>
-                      <a href="{% url 'safaris-details' %}"><button class="book-btn">View Itenary</button></a>
-                  </div>
-              </div>
-              <div class="row">
-                  <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><img src="{% static 'assets/images/Visit-Rwanda-Akagera-Three-Zebra-1920x1280.jpg' %}" alt=""></a>
-                  <div class="card-body">
-                      <h3>2 Days Akagera Park Visit</h3>
-                      <p>
-                        Enjoy our  days Gorilla Trekking in the bush of virunga's national park</p>
-                      <div class="rating">
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                      </div>
-                      <h5>Price :  $999</h5>
-                        <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><button class="book-btn">View Itenary</button></a>
-                  </div>
-              </div>
-              <div class="row">
-                <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/Depositphotos_149502314_L.jpg' %}" alt=""></a>
-                  <div class="card-body">
-                      <h3>4 Days Primate Tracking</h3>
-                      <p>
-                        Enjoy our  days Gorilla Trekking in the bush of virunga's national park
-                      </p>
-                      <div class="rating">
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                      </div>
-                      <h5>Price :  $999</h5>
-                      <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><button class="book-btn">View Itenary</button></a>
-                  </div>
-              </div>
-              <div class="row">
-                  <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/lake-kivu-boats.jpg' %}" alt=""></a>
-                  <div class="card-body">
-                      <h3>5 days Lake Kivu Visit</h3>
-                      <p>
-                        Enjoy our  days Gorilla Trekking in the bush of virunga's national park
-                      </p>
-                      <div class="rating">
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                      </div>
-                      <h5>Price :  $999</h5>
-                      <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><button class="book-btn">View Itenary</button></a>
-                  </div>
-              </div>
-              <div class="row">
-                <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/Visit-Rwanda_-Kigali-Convention-Centre-1920x1280.jpg' %}" alt=""></a>
-                  <div class="card-body">
-                      <h3>2 Days Kigali city Tour</h3>
-                      <p>
-                        Enjoy our  days Gorilla Trekking in the bush of virunga's national park
-                      </p>
-                      <div class="rating">
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                      </div>
-                      <h5>Price :  $999</h5>
-                        <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><button class="book-btn">View Itenary</button></a>
-                  </div>
-              </div>
-              <div class="row">
-                  <a href="{% url 'safaris-details' %}"><img src="{% static 'assets/images/nyungwe-tours-05-640w.jpg' %}" alt=""></a>
-                  <div class="card-body">
-                      <h3>4 days nyungwe national park Vist</h3>
-                      <p>
-                        Enjoy our  days Gorilla Trekking in the bush of virunga's national park
-                      </p>
-                      <div class="rating">
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                          <i class="fa-solid fa-star checked"></i>
-                      </div>
-                      <h5>Price :  $999</h5>
-                        <a href="{% url 'safaris-details' %}" style="text-decoration: none;"><button class="book-btn">View Itenary</button></a>
-                  </div>
-              </div>
-          </div>
-
-      </section>
-      <section class="about" id="about">
-      <div class="about-img">
-          <img src="{% static 'assets/images/boat-magashi.jpg' %}" alt="">
-      </div>
-      <div class="about-info">
-          <h6>About us</h6>
-          <p>At Hello Africa Travel And Tours Team We pride ourselves on providing the best safaris vehicles and experienced tour guides for a memorable experience all over the world.
-            At Hello Africa Travel And Tours Team We pride ourselves on providing the best safaris vehicles and experienced tour guides for a memorable experience all over the world.
-          </p>
-
-          <p>You will get all wild life action using our long-range high-frequency radio and binoculars. Our safari guide books help our local tour guides provide detailed information about flora and fauna.</p>
-
-          <button class="about-btn">Read More...</button>
-      </div>
-    </section>
-
-    <div class="collections">
-      <h2 class="gallery-header">Our Gallery</h2>
-      <div class="slider-wrapperrer">
-        <button id="prev-slide" class="slide-button material-symbols-rounded">
-          chevron_left
-        </button>
-        <ul class="image-list">
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-NH_OO_Activities_Chimpanzee_Trek_6853_MASTER-1280x853.jpg' %}" alt="img-6" />
-
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Crater-Lake-Volcanoes-e1533416621808-1920x1267.jpg' %}"alt="img-7" />
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Akagera-Young-Rhino-1920x1280.jpg' %}"alt="img-9" />
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Rusizi-District-1650x1100.jpg' %}"alt="img-8" />
-
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Akagera-Lion-in-Tree-1920x1280.jpg' %}"alt="img-10" />
-          <img class="image-item" src="{% static 'assets/images/elephants.jpg' %}"alt="img-1" />
-          <img class="image-item" src="{% static 'assets/images/giraffe-uganda-800x600.jpg' %}" alt="img-2" />
-          <img class="image-item" src="{% static 'assets/images/leopard.jpg' %}" alt="img-3" />
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Volcano-1650x1100.jpg' %}"alt="img-4" />
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-NH_OO_Lifestyle_Canopy_Walk_0657_MASTER-700x467.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/3+days+Rwanda+Gorilla+Trekking+-640w.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/1+Day+Akagera+National+Park+Safari-640w.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/Zebra.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/Visit-Rwanda-Musanze-Cave-1920x1920.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/1+Day+Rwanda+Gorilla+Trekking-640w.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/2+Days+Akagera+National+Park+Safari-640w.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/12--1920x1278.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/15+DAYS+UGANDA-RWANDA+-+ODYSSEY.docx-640w.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/20246390302_0010758338_k-1650x1100.jpg' %}" alt="img-5" />
-
-          <img class="image-item" src="{% static 'assets/images/16-DAYS-BIRDS-OF-UGANDA.jpg' %}" alt="img-5" />
+      
 
 
-        </ul>
-        <button id="next-slide" class="slide-button material-symbols-rounded">
-          chevron_right
-        </button>
-      </div>
-      <div class="slider-scrollbar">
-        <div class="scrollbar-track">
-          <div class="scrollbar-thumb"></div>
-        </div>
-      </div>
-    </div>
 
       
       <!-- Packages Section End -->
-        
+   
   </main>
   {% include 'footer.html' %}
+  <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+  </a>
+
       <!--=============== MAIN JS ===============-->
      
     <script>
-      // background opacity on scroll
-      window.addEventListener('scroll', () => {
-         const header = document.querySelector('.header');
-         if (window.scrollY > 600) {
-            header.style.backgroundColor = '#000';
-         } else {
-            header.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-            // Change the '0.8' value to set the desired opacity (from 0 to 1)
-         }
-      });
+      'use strict';
 
-      var swiper = new Swiper('.swiper', {
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      on: {
-        init: function () {
-            // When Swiper is initialized, add active class to the first slide content
-            document.querySelector('.slide-content').classList.add('active');
-        },
-        slideChange: function () {
-            // When slide changes, remove active class from all slide contents
-            var activeContents = document.querySelectorAll('.slide-content.active');
-            activeContents.forEach(function (content) {
-              content.classList.remove('active');
-            });
-            // Add active class to the current slide content
-            var currentSlide = this.slides[this.activeIndex];
-            var slideContent = currentSlide.querySelector('.slide-content');
-            slideContent.classList.add('active');
-        },
-      },
-     });
+
+
+    /**
+     * PRELOAD
+     * 
+     * loading will be end after document is loaded
+     */
+
+    const preloader = document.querySelector("[data-preaload]");
+
+    window.addEventListener("load", function () {
+      preloader.classList.add("loaded");
+      document.body.classList.add("loaded");
+    });
+
+
+
+    /**
+     * add event listener on multiple elements
+     */
+
+    const addEventOnElements = function (elements, eventType, callback) {
+      for (let i = 0, len = elements.length; i < len; i++) {
+        elements[i].addEventListener(eventType, callback);
+      }
+    }
+
+
+
+    /**
+     * NAVBAR
+     */
+
+    const navbar = document.querySelector("[data-navbar]");
+    const navTogglers = document.querySelectorAll("[data-nav-toggler]");
+    const overlay = document.querySelector("[data-overlay]");
+
+    const toggleNavbar = function () {
+      navbar.classList.toggle("active");
+      overlay.classList.toggle("active");
+      document.body.classList.toggle("nav-active");
+    }
+
+    addEventOnElements(navTogglers, "click", toggleNavbar);
+
+
+
+    /**
+     * HEADER & BACK TOP BTN
+     */
+
+    const header = document.querySelector("[data-header]");
+    const backTopBtn = document.querySelector("[data-back-top-btn]");
+
+    let lastScrollPos = 0;
+
+    const hideHeader = function () {
+      const isScrollBottom = lastScrollPos < window.scrollY;
+      if (isScrollBottom) {
+        header.classList.add("hide");
+      } else {
+        header.classList.remove("hide");
+      }
+
+      lastScrollPos = window.scrollY;
+    }
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY >= 50) {
+        header.classList.add("active");
+        backTopBtn.classList.add("active");
+        hideHeader();
+      } else {
+        header.classList.remove("active");
+        backTopBtn.classList.remove("active");
+      }
+    });
+
+
+
+    /**
+     * HERO SLIDER
+     */
+
+    const heroSlider = document.querySelector("[data-hero-slider]");
+    const heroSliderItems = document.querySelectorAll("[data-hero-slider-item]");
+    const heroSliderPrevBtn = document.querySelector("[data-prev-btn]");
+    const heroSliderNextBtn = document.querySelector("[data-next-btn]");
+
+    let currentSlidePos = 0;
+    let lastActiveSliderItem = heroSliderItems[0];
+
+    const updateSliderPos = function () {
+      lastActiveSliderItem.classList.remove("active");
+      heroSliderItems[currentSlidePos].classList.add("active");
+      lastActiveSliderItem = heroSliderItems[currentSlidePos];
+    }
+
+    const slideNext = function () {
+      if (currentSlidePos >= heroSliderItems.length - 1) {
+        currentSlidePos = 0;
+      } else {
+        currentSlidePos++;
+      }
+
+      updateSliderPos();
+    }
+
+    heroSliderNextBtn.addEventListener("click", slideNext);
+
+    const slidePrev = function () {
+      if (currentSlidePos <= 0) {
+        currentSlidePos = heroSliderItems.length - 1;
+      } else {
+        currentSlidePos--;
+      }
+
+      updateSliderPos();
+    }
+
+    heroSliderPrevBtn.addEventListener("click", slidePrev);
+
+    /**
+     * auto slide
+     */
+
+    let autoSlideInterval;
+
+    const autoSlide = function () {
+      autoSlideInterval = setInterval(function () {
+        slideNext();
+      }, 7000);
+    }
+
+    addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseover", function () {
+      clearInterval(autoSlideInterval);
+    });
+
+    addEventOnElements([heroSliderNextBtn, heroSliderPrevBtn], "mouseout", autoSlide);
+
+    window.addEventListener("load", autoSlide);
+
+
+
+    /**
+     * PARALLAX EFFECT
+     */
+
+    const parallaxItems = document.querySelectorAll("[data-parallax-item]");
+
+    let x, y;
+
+    window.addEventListener("mousemove", function (event) {
+
+      x = (event.clientX / window.innerWidth * 10) - 5;
+      y = (event.clientY / window.innerHeight * 10) - 5;
+
+      // reverse the number eg. 20 -> -20, -5 -> 5
+      x = x - (x * 2);
+      y = y - (y * 2);
+
+      for (let i = 0, len = parallaxItems.length; i < len; i++) {
+        x = x * Number(parallaxItems[i].dataset.parallaxSpeed);
+        y = y * Number(parallaxItems[i].dataset.parallaxSpeed);
+        parallaxItems[i].style.transform = `translate3d(${x}px, ${y}px, 0px)`;
+      }
+
+    });
+
 
     </script>
+      <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
    </body>
 </html>
